@@ -13,7 +13,11 @@ Use ./backend/app.js to test APIs:
 author api's in following fashion  
 ```
   app.use('/*yourUrl*', (req, res, next) => {     
-    **api content here**  
+    **api content here**
+       console.log(req.body)        // req.body refers to json object of request
+       res.send('Hello')            // sends response to client requestor
+       // or
+       res.json({message: 'Hello'}) // sends response in json
   })
 ```
  req - request of HTTP  
