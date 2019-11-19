@@ -28,11 +28,26 @@ app.use('/login', login)
 
 app.use('/cool',(req, res, next) => {
     console.log(req.body)
-    res.send('You suck')
+
+    // creates object
+    testObj = {
+        test: [
+            {
+                message: 'sup dude'
+            },
+            {
+                message: 'nothing much, you?'
+            }
+        ]
+    }
+
+    // use this to send json objects in response
+    res.json(testObj)
     next()
 })
 
 app.use('/nice', (req, res, next) => {
+    // sends response
     res.send('Hello Earthlings')
 })
 
