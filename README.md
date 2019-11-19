@@ -10,9 +10,9 @@ Use for testing APIs
 ## Testing APIs
 Use ./backend/app.js to test APIs:
 
-author api's in following fashion
-  app.use('/*yourUrl*', (req, res, next) => {   
-    **api content here**
+author api's in following fashion  
+  app.use('/*yourUrl*', (req, res, next) => {     
+    **api content here**  
   })
   
  req - request of HTTP
